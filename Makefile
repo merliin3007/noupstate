@@ -4,9 +4,15 @@ LDFLAGS=
 LIBFLAGS=
 SOURCES=$(wildcard src/*.c)
 OBJECTS=$(SOURCES:.c=.o)
-BINARY=bin/noupstate
+BINARY_DIR=bin
+BINARY=$(BINARY_DIR)/noupstate
 
-all: $(SOURCES) $(BINARY)
+all: makedirs build
+
+makedirs:
+	mkdir -p $(BINARY_DIR)
+
+build: $(SOURCES) $(BINARY)
 
 $(BINARY): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@ $(LIBFLAGS)
