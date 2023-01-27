@@ -24,7 +24,7 @@ Compile with `make`. The binary will be generated in the `bin/` directory.
 You can install the binary with `make install` (optional).
 
 ```sh
-git clone *link*
+git clone https://github.com/merliin3007/noupstate
 cd noupstate
 make
 sudo make install # optional, installs the binary to your system.
