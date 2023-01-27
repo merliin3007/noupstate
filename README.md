@@ -14,7 +14,7 @@ Check your GPU temperatures frequently!
 `noupstate` needs elevated permissions.
 
 - `noupstate list` lists all avaliable pstates for device 0. To specify any other device, use the `-d <device>` option.
-- `noupstate set -d performance | save-energy | id:<id> | val:<value>` sets a specific pstate for device 0. To specify any other device, use the `-p <device>` option.  
+- `noupstate set -p performance | save-energy | id:<id> | val:<value>` sets a specific pstate for device 0. To specify any other device, use the `-d <device>` option.  
   Note that this will only last until you reboot your system.
 
 ## Installation
